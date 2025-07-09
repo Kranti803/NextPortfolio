@@ -1,6 +1,7 @@
 import React from "react";
 import { projects } from "@/constants";
 import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -24,7 +25,7 @@ const Projects = () => {
             <div key={index}>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group">
                 <div className="aspect-video bg-gray-200 dark:bg-gray-600 overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

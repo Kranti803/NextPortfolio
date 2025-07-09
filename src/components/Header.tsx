@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/context/themeContext";
 import { navLinks } from "@/constants";
@@ -10,6 +10,7 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const { theme, toggleTheme } = useTheme();
+  
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">

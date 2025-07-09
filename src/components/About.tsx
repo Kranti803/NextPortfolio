@@ -13,10 +13,9 @@ const About = () => {
               About Me
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a recent computer science graduate with a passion for creating
-              digital solutions that make a difference. My journey in
-              programming started during college, and I've been fascinated by
-              the endless possibilities of technology ever since.
+              I build digital experiences that solve real-world problems. With a
+              strong foundation in programming and a curious mindset, I’m always
+              exploring new ways to create value through technology.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               I believe in writing clean, efficient code and creating user
@@ -30,7 +29,7 @@ const About = () => {
                   size={16}
                   className="text-emerald-600 dark:text-emerald-400"
                 />
-                <span>Delhi, India</span>
+                <span>Kathmandu, Nepal</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                 <Calendar

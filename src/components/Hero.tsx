@@ -1,5 +1,13 @@
 import React from "react";
-import { Github, Linkedin, Mail, ChevronDown, ArrowRight,Download } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ChevronDown,
+  ArrowRight,
+  Download,
+} from "lucide-react";
+import Link from "next/link";
 const Hero = () => {
   return (
     <section
@@ -22,44 +30,47 @@ const Hero = () => {
               </h2>
 
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-                A passionate computer science student eager to create
-                innovative web solutions. I love building user-friendly
-                applications and learning new technologies every day.
+                A passionate computer science student eager to create innovative
+                web solutions. I love building user-friendly applications and
+                learning new technologies every day.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center justify-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
-                View My Projects
-                <ArrowRight size={18} className="ml-2" />
-              </button>
+              <Link href={"#projects"}>
+                <button className="inline-flex items-center justify-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+                  View Projects
+                  <ArrowRight size={18} className="ml-2" />
+                </button>
+              </Link>
 
-              <button
-                className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
-              >
-                <Download size={18} className="mr-2" />
-                Download CV
-              </button>
+              <Link href={"/resume.pdf"} download={true}>
+                <button className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
+                  <Download size={18} className="mr-2" />
+                  Download CV
+                </button>
+              </Link>
             </div>
-            {/* Social Links */}
             <div className="flex items-center space-x-6">
-              <a
-                href="#"
+              <Link
+                href="https://github.com/Kranti803"
+                target="_blank"
                 className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
               >
                 <Github size={24} />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/kranti-kumar-671762223/"
+                target="_blank"
                 className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
               >
                 <Linkedin size={24} />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="mailto:krantikumar803@gmail.com"
                 className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
               >
                 <Mail size={24} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

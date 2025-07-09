@@ -1,5 +1,8 @@
-import { Smartphone, Globe } from "lucide-react";
+import { Smartphone, Globe, School } from "lucide-react";
 import CertificateImg from "@/assets/certificate.png";
+import Ecommerce from "@/assets/ecommerce.png";
+import Blog from "@/assets/blog.png";
+import MovieSeries from "@/assets/movie.png";
 
 export const navLinks = [
   "home",
@@ -7,7 +10,7 @@ export const navLinks = [
   "skills",
   "projects",
   "education",
-  "certificates",
+  // "certificates",
   "services",
   "contact",
 ];
@@ -17,25 +20,16 @@ export const skills = {
     "React",
     "TypeScript",
     "Next.js",
-    "Vue.js",
     "Tailwind CSS",
     "JavaScript",
     "HTML/CSS",
   ],
-  backend: [
-    "Node.js",
-    "Python",
-    "Express",
-    "Django",
-    "REST APIs",
-    "GraphQL",
-    "MongoDB",
-  ],
-  tools: ["Git", "VS Code", "Figma", "Docker", "AWS", "Vercel", "Postman"],
+  backend: ["Node.js", "Express", "REST APIs", "MongoDB", "Redis"],
+  tools: ["Git", "VS Code", "Figma", "Vercel", "Postman", "AI Tools"],
   learning: [
     "React Native",
-    "TypeScript",
-    "Cloud Computing",
+    "Python",
+    "GEN AI",
     "DevOps",
     "System Design",
     "Testing",
@@ -63,32 +57,29 @@ export const projects = [
   {
     title: "E-Commerce Website",
     description:
-      "A full-stack e-commerce platform with user authentication, product catalog, and shopping cart functionality.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    image:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "#",
-    demo: "#",
+      "A full-stack MERN e-commerce platform featuring user authentication, product browsing, cart management, and secure checkout. Admin dashboard included for product and order control.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+    image: Ecommerce,
+    github: "https://github.com/Kranti803/frontend-Ecommerce",
+    demo: "https://frontend-ecommerce-five.vercel.app",
   },
   {
-    title: "Task Management App",
+    title: "FullStack Blog Website",
     description:
-      "A collaborative task management application with real-time updates and team collaboration features.",
+      "A full-featured blog platform with authentication, blog creation/editing, and comment system. Built with a clean UI, Firebase backend, and responsive design.",
     tech: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
-    image:
-      "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "#",
-    demo: "#",
+    image: Blog,
+    github: "https://github.com/Kranti803/myblog--Frontend",
+    demo: "https://myblog-frontend-rouge.vercel.app/",
   },
   {
-    title: "Weather Dashboard",
+    title: "MovieVerse",
     description:
-      "A responsive weather application with location-based forecasts and interactive data visualization.",
-    tech: ["Vue.js", "API Integration", "Chart.js", "CSS3"],
-    image:
-      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "#",
-    demo: "#",
+      "A React-based movies and shows discovery app using TMDb API. Allows users to browse trending movies, view detailed info, and search content.User can watch movies and shows in real time, styled with SCSS for UI with infinite scrolling feature.",
+    tech: ["React", "Sass", "API-Integration", "Axios"],
+    image: MovieSeries,
+    github: "https://github.com/Kranti803/movieWebApp",
+    demo: "https://movie-web-app-gamma.vercel.app/",
   },
 ];
 
@@ -125,31 +116,24 @@ export const certificates = [
 
 export const education = [
   {
-    degree: "Bachelor of Technology in Computer Science",
-    school: "Indian Institute of Technology",
-    period: "2020 - 2024",
-    location: "Delhi, India",
+    degree:
+      "Bachelor of Science in Computer Science and Information Technology",
+    school: "Amrit Campus",
+    period: "2022 - Present",
+    location: "Kathmandu, Nepal",
     description:
-      "Comprehensive foundation in computer science fundamentals, algorithms, and software development practices.",
-    achievements: [
-      "CGPA: 8.5/10.0",
-      "Member of Coding Club",
-      "Participated in Multiple Hackathons",
-    ],
+      "Built strong technical skills in algorithms, data structures, and database management system, computer networks, security systems and many more through hands-on projects and collaboration.",
+    cgpa: "soon...",
     color: "emerald",
   },
   {
-    degree: "Online Courses & Certifications",
-    school: "Various Platforms",
-    period: "2023 - Present",
-    location: "Online",
+    degree: "Intermediate - PCBM",
+    school: "Kamana Int'l College",
+    period: "2020 - 2022",
+    location: "Kathmandu,Nepal",
     description:
-      "Continuous learning through industry-relevant courses and hands-on projects.",
-    achievements: [
-      "React Developer Certificate - Meta",
-      "JavaScript Algorithms - freeCodeCamp",
-      "Frontend Web Development - Coursera",
-    ],
+      "Focused on academic growth, discipline, and developing a strong foundation for future higher education.",
+    cgpa: "3.32/4.0",
     color: "blue",
   },
 ];

@@ -15,7 +15,7 @@ const Certificates = () => {
             Certifications
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Online courses and certifications that have enhanced my skills
+            Online courses and certifications that have enhanced my skills.
           </p>
         </div>
 
@@ -47,12 +47,9 @@ const Certificates = () => {
                       </p>
                     </div>
                   </div>
-                  {/* <div className="text-xs text-gray-600 dark:text-gray-300">
+                  <div className="text-xs text-gray-600 dark:text-gray-300">
                     <span>Issued: {cert.date}</span>
-                  </div> */}
-                </div>
-                <div className="text-xs text-gray-600 dark:text-gray-300 p-4">
-                  <span>Issued: {cert.date}</span>
+                  </div>
                 </div>
               </div>
             </div>

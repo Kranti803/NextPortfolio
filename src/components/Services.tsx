@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { services } from "@/constants";
 
@@ -14,8 +14,8 @@ const Services = () => {
             What I Can Do
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Services I can provide as a fresh graduate ready to contribute to
-            your team
+            Services I offer as a passionate developer eager to bring value to
+            your team.
           </p>
         </div>
 
