@@ -67,7 +67,7 @@ export const projects = [
     title: "FullStack Blog Website",
     description:
       "A full-featured blog platform with authentication, blog creation/editing, and comment system. Built with a clean UI, Firebase backend, and responsive design.",
-    tech: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
+    tech: ["React", "Node.js", "Tailwind CSS", "Express.js", "MongoDB"],
     image: Blog,
     github: "https://github.com/Kranti803/myblog--Frontend",
     demo: "https://myblog-frontend-rouge.vercel.app/",
@@ -75,7 +75,7 @@ export const projects = [
   {
     title: "MovieVerse",
     description:
-      "A React-based movies and shows discovery app using TMDb API. Allows users to browse trending movies, view detailed info, and search content.User can watch movies and shows in real time, styled with SCSS for UI with infinite scrolling feature.",
+      "A React-based movies and shows discovery app using TMDb API. Allows users to browse trending movies, view detailed info, and search content.User can watch movies and shows in real time,with infinite scrolling feature.",
     tech: ["React", "Sass", "API-Integration", "Axios"],
     image: MovieSeries,
     github: "https://github.com/Kranti803/movieWebApp",
