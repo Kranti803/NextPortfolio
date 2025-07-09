@@ -10,7 +10,6 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const { theme, toggleTheme } = useTheme();
-  
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg z-50 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
@@ -78,6 +77,7 @@ const Header = () => {
             {navLinks.map((section) => (
               <button
                 key={section}
+                onClick={() => setActiveSection(section)}
                 className="block w-full text-left px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-gray-50 dark:hover:bg-gray-800 capitalize transition-all duration-300"
               >
                 {section}
