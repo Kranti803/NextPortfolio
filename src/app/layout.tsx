@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import { ThemeProvider } from "../context/themeContext";
+import { ThemeProvider } from "../context/themeContext";
 
 export const metadata: Metadata = {
   title: "Kranti kumar",
@@ -15,8 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        {/* <ThemeProvider>{children}</ThemeProvider> */}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

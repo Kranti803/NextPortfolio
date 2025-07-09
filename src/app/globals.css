@@ -54,3 +54,7 @@
 .dark .hover-lift:hover {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
+
+/* html {
+  scroll-behavior: smooth;
+} */
