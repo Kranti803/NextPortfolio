@@ -51,15 +51,16 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   };
 
   // Show splash screen while loading
-  if (isThemeLoaded) {
-    const handleSplashComplete = () => {
-      setIsLoading(false);
-    };
-    if (isLoading) {
-      return <SplashScreen onComplete={handleSplashComplete} duration={2000} />;
-    }
-  }
+  // if (isThemeLoaded) {
+  //   const handleSplashComplete = () => {
+  //     setIsLoading(false);
+  //   };
+  //   if (isLoading) {
+  //     return <SplashScreen onComplete={handleSplashComplete} duration={2000} />;
+  //   }
+  // }
 
+  if (!isThemeLoaded) return <SplashScreen />;
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
