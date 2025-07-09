@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import SplashScreen from "./components/SplashScreen";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/context/themeContext";
 import { navLinks } from "@/constants";

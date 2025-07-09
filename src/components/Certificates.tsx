@@ -1,6 +1,7 @@
 import React from "react";
 import { Award } from "lucide-react";
 import { certificates } from "@/constants";
+import Image from "next/image";
 
 const Certificates = () => {
   return (
@@ -21,9 +22,9 @@ const Certificates = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certificates.map((cert, index) => (
             <div key={index}>
-              <div className="bg-white dark:bg-gray-900 rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group">
+              <div className="bg-white dark:bg-gray-900 rounded-xl hover:shadow-lg h-80 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group flex flex-col justify-between">
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-600 overflow-hidden">
-                  <img
+                  <Image
                     src={cert.image}
                     alt={cert.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -46,10 +47,12 @@ const Certificates = () => {
                       </p>
                     </div>
                   </div>
-
-                  <div className="text-xs text-gray-600 dark:text-gray-300">
+                  {/* <div className="text-xs text-gray-600 dark:text-gray-300">
                     <span>Issued: {cert.date}</span>
-                  </div>
+                  </div> */}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-300 p-4">
+                  <span>Issued: {cert.date}</span>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { Smartphone, Globe } from "lucide-react";
+import CertificateImg from "@/assets/certificate.png";
 
 export const navLinks = [
   "home",
@@ -96,32 +97,28 @@ export const certificates = [
     title: "React Developer Certificate",
     issuer: "Meta",
     date: "2024",
-    image:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: CertificateImg,
     credentialId: "META-REACT-2024-001",
   },
   {
     title: "JavaScript Algorithms",
     issuer: "freeCodeCamp",
     date: "2024",
-    image:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: CertificateImg,
     credentialId: "FCC-JS-2024-002",
   },
   {
     title: "Frontend Web Development",
     issuer: "Coursera",
     date: "2023",
-    image:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: CertificateImg,
     credentialId: "COURSERA-FE-2023-003",
   },
   {
     title: "Git & GitHub Essentials",
     issuer: "GitHub",
     date: "2023",
-    image:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: CertificateImg,
     credentialId: "GITHUB-GIT-2023-004",
   },
 ];

@@ -1,5 +1,4 @@
 "use client";
-import SplashScreen from "@/components/SplashScreen";
 import React, {
   createContext,
   useState,
@@ -27,18 +26,19 @@ export const ThemeContext = createContext<ThemeContextType>(defaultContext);
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isThemeLoaded, setIsThemeLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
-  //on first mount
+  // Load theme on first mount
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light" || savedTheme === "dark") {
-      setTheme(savedTheme);
-    }
+    const resolvedTheme =
+      savedTheme === "dark" || savedTheme === "light" ? savedTheme : "light";
+
+    setTheme(resolvedTheme);
+    document.documentElement.classList.toggle("dark", resolvedTheme === "dark");
     setIsThemeLoaded(true);
   }, []);
 
-  //whenever the theme changes
+  // Whenever the theme changes AFTER theme is loaded
   useEffect(() => {
     if (isThemeLoaded) {
       localStorage.setItem("theme", theme);
@@ -50,17 +50,9 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  // Show splash screen while loading
-  // if (isThemeLoaded) {
-  //   const handleSplashComplete = () => {
-  //     setIsLoading(false);
-  //   };
-  //   if (isLoading) {
-  //     return <SplashScreen onComplete={handleSplashComplete} duration={2000} />;
-  //   }
-  // }
+  // Prevent render until theme loaded to avoid flicker
+  if (!isThemeLoaded) return null;
 
-  if (!isThemeLoaded) return <SplashScreen />;
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Github,
-  Linkedin,
-  Mail,
-
-} from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -18,8 +13,8 @@ const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I'm actively looking for entry-level opportunities and exciting
-            projects to work on
+            I'm actively looking for the opportunities and exciting projects to
+            work on.
           </p>
         </div>
 
@@ -29,9 +24,10 @@ const Contact = () => {
               Ready to contribute
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              As a fresh graduate, I'm eager to bring my passion for coding and
-              fresh perspective to your team. Let's discuss how I can contribute
-              to your next project.
+              With a strong foundation in development and a passion for
+              learning, I'm excited to bring my perspective and skills to your
+              team. Let’s connect and explore how I can support your next
+              project.
             </p>
 
             <div className="space-y-4">
@@ -47,7 +43,7 @@ const Contact = () => {
                     Email
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
-                    kranti.kumar@email.com
+                    krantikumar803@gmail.com
                   </p>
                 </div>
               </div>
@@ -64,7 +60,7 @@ const Contact = () => {
                     LinkedIn
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
-                    linkedin.com/in/krantikumar
+                    linkedin.com/in/kranti-kumar-671762223/
                   </p>
                 </div>
               </div>
@@ -81,7 +77,7 @@ const Contact = () => {
                     GitHub
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
-                    github.com/krantikumar
+                    github.com/Kranti803
                   </p>
                 </div>
               </div>
