@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "@/constants";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import AnimatedSection from "./AnimatedSection";
 
 const Projects = () => {
   return (
@@ -10,7 +11,7 @@ const Projects = () => {
       className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
             Learning Projects
           </h2>
@@ -18,11 +19,11 @@ const Projects = () => {
             Projects I've built while learning and exploring different
             technologies
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index}>
+            <AnimatedSection key={index} delay={index * 100}>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group">
                 <div className="aspect-video bg-gray-200 dark:bg-gray-600 overflow-hidden">
                   <Image
@@ -66,7 +67,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

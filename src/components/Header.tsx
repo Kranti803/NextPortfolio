@@ -75,13 +75,14 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 transition-colors duration-300">
             {navLinks.map((section) => (
-              <button
-                key={section}
-                onClick={() => setActiveSection(section)}
-                className="block w-full text-left px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-gray-50 dark:hover:bg-gray-800 capitalize transition-all duration-300"
-              >
-                {section}
-              </button>
+              <Link href={`#${section}`} key={section}>
+                <button
+                  onClick={() => setActiveSection(section)}
+                  className="block w-full text-left px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-gray-50 dark:hover:bg-gray-800 capitalize transition-all duration-300"
+                >
+                  {section}
+                </button>
+              </Link>
             ))}
           </div>
         )}

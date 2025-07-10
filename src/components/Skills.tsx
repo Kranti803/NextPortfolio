@@ -1,6 +1,7 @@
 import React from "react";
 import { skills } from "@/constants";
 import { Code, Server, Globe, Lightbulb } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const Skills = () => {
   return (
@@ -9,7 +10,7 @@ const Skills = () => {
       className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
             Technical Skills
           </h2>
@@ -17,10 +18,10 @@ const Skills = () => {
             Technologies I work with and continuously learning to build amazing
             applications
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div>
+          <AnimatedSection delay={100}>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <Code
@@ -42,9 +43,9 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
-          <div>
+          <AnimatedSection delay={200}>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <Server
@@ -66,9 +67,9 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
-          <div>
+          <AnimatedSection delay={300}>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <Globe
@@ -90,9 +91,9 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
-          <div>
+          <AnimatedSection delay={400}>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <Lightbulb
@@ -114,7 +115,7 @@ const Skills = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

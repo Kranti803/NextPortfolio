@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { services } from "@/constants";
+import AnimatedSection from "./AnimatedSection";
 
 const Services = () => {
   return (
@@ -9,7 +10,7 @@ const Services = () => {
       className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
             What I Can Do
           </h2>
@@ -17,7 +18,7 @@ const Services = () => {
             Services I offer as a passionate developer eager to bring value to
             your team.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => {
@@ -29,7 +30,7 @@ const Services = () => {
             };
 
             return (
-              <div key={index}>
+              <AnimatedSection delay={index * 100} key={index}>
                 <div className="bg-white dark:bg-gray-900 p-8 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full">
                   <div className="flex items-center gap-4 mb-6">
                     <div
@@ -48,7 +49,7 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-              </div>
+              </AnimatedSection>
             );
           })}
         </div>

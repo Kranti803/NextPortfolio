@@ -2,6 +2,7 @@ import React from "react";
 import { Award } from "lucide-react";
 import { certificates } from "@/constants";
 import Image from "next/image";
+import AnimatedSection from "./AnimatedSection";
 
 const Certificates = () => {
   return (
@@ -10,18 +11,18 @@ const Certificates = () => {
       className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
             Certifications
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Online courses and certifications that have enhanced my skills.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certificates.map((cert, index) => (
-            <div key={index}>
+            <AnimatedSection key={index} delay={index * 100}>
               <div className="bg-white dark:bg-gray-900 rounded-xl hover:shadow-lg h-80 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group flex flex-col justify-between">
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-600 overflow-hidden">
                   <Image
@@ -52,7 +53,7 @@ const Certificates = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

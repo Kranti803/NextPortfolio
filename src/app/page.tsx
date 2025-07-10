@@ -8,10 +8,12 @@ import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 
+import { ToastContainer } from "react-toastify";
+
 export default function Home() {
-  
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 font-inter">
+      <ToastContainer />
       <Header />
       <Hero />
       <About />

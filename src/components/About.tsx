@@ -1,5 +1,6 @@
 import React from "react";
 import { User, MapPin, Calendar } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 const About = () => {
   return (
     <section
@@ -8,7 +9,7 @@ const About = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <AnimatedSection>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-6">
               About Me
             </h2>
@@ -39,12 +40,12 @@ const About = () => {
                 <span>Available for opportunities</span>
               </div>
             </div>
-          </div>
-          <div className="lg:text-right">
+          </AnimatedSection>
+          <AnimatedSection delay={200} className="lg:text-right">
             <div className="inline-block bg-gradient-to-br from-emerald-500 to-blue-500 p-8 rounded-2xl">
               <User size={120} className="text-white" />
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
