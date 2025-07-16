@@ -1,7 +1,7 @@
 import React from "react";
-import { skills } from "@/constants";
-import { Code, Server, Globe, Lightbulb } from "lucide-react";
+import { skills1 } from "@/constants";
 import AnimatedSection from "./AnimatedSection";
+import Image from "next/image";
 
 const Skills = () => {
   return (
@@ -20,102 +20,23 @@ const Skills = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <AnimatedSection delay={100}>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center gap-3 mb-4">
-                <Code
-                  className="text-emerald-600 dark:text-emerald-400"
-                  size={24}
+        <div className="grid gap-8 grid-cols-2 sm:grid-cols-4 pt-6">
+          {skills1.map((item) => (
+            <AnimatedSection delay={200}>
+              <div
+                key={item.id}
+                className="dark:text-white min-h-[125px] flex flex-col text-center items-center justify-center
+           hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 "
+              >
+                <Image
+                  src={item.imageSrc}
+                  className=" h-[70px] w-[70px]"
+                  alt="skills_png"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Frontend
-                </h3>
+                <span className="text-gray-600">{item.name}</span>
               </div>
-              <div className="space-y-2">
-                {skills.frontend.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={200}>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center gap-3 mb-4">
-                <Server
-                  className="text-blue-600 dark:text-blue-400"
-                  size={24}
-                />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Backend
-                </h3>
-              </div>
-              <div className="space-y-2">
-                {skills.backend.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={300}>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center gap-3 mb-4">
-                <Globe
-                  className="text-purple-600 dark:text-purple-400"
-                  size={24}
-                />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Tools
-                </h3>
-              </div>
-              <div className="space-y-2">
-                {skills.tools.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={400}>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center gap-3 mb-4">
-                <Lightbulb
-                  className="text-orange-600 dark:text-orange-400"
-                  size={24}
-                />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Learning
-                </h3>
-              </div>
-              <div className="space-y-2">
-                {skills.learning.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm mr-2 mb-2"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>
