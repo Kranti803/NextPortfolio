@@ -2,7 +2,7 @@ import { Smartphone, Globe, School } from "lucide-react";
 import CertificateImg from "@/assets/certificate.png";
 import Ecommerce from "@/assets/ecommerce.png";
 import Blog from "@/assets/blog.png";
-import MovieSeries from "@/assets/movie.png";
+import Movie from "@/assets/movie.png";
 
 
 
@@ -180,7 +180,7 @@ export const projects = [
     description:
       "A React-based movies and shows discovery app using TMDb API. Allows users to browse trending movies, view detailed info, and search content.User can watch movies and shows in real time,with infinite scrolling feature.",
     tech: ["React", "Sass", "API-Integration", "Axios"],
-    image: MovieSeries,
+    image: Movie,
     github: "https://github.com/Kranti803/movieWebApp",
     demo: "https://movie-web-app-gamma.vercel.app/",
   },
