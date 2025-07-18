@@ -25,8 +25,8 @@ const Skills = () => {
             <AnimatedSection delay={200} key={index}>
               <div
                 key={item.id}
-                className="dark:text-white min-h-[125px] flex flex-col text-center items-center justify-center
-           hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 "
+                className="dark:text-white min-h-[125px] bg-gray-50 dark:bg-transparent dark:border border-gray-500 rounded-md flex flex-col text-center items-center justify-center
+           hover:shadow-lg transition-all duration-300 dark:border-gray-700 "
               >
                 <Image
                   src={item.imageSrc}

@@ -1,5 +1,5 @@
 import { Smartphone, Globe, School } from "lucide-react";
-import CertificateImg from "@/assets/certificate.png";
+import ResponsiveDesign from "@/assets/responsive_web_design.png";
 import Ecommerce from "@/assets/ecommerce.png";
 import Blog from "@/assets/blog.png";
 import Movie from "@/assets/movie.png";
@@ -188,33 +188,13 @@ export const projects = [
 
 export const certificates = [
   {
-    title: "React Developer Certificate",
-    issuer: "Meta",
-    date: "2024",
-    image: CertificateImg,
-    credentialId: "META-REACT-2024-001",
+    title: "Responsive Web Design",
+    issuer: "FreeCodeCamp",
+    date: "2025",
+    image: ResponsiveDesign,
+    
   },
-  {
-    title: "JavaScript Algorithms",
-    issuer: "freeCodeCamp",
-    date: "2024",
-    image: CertificateImg,
-    credentialId: "FCC-JS-2024-002",
-  },
-  {
-    title: "Frontend Web Development",
-    issuer: "Coursera",
-    date: "2023",
-    image: CertificateImg,
-    credentialId: "COURSERA-FE-2023-003",
-  },
-  {
-    title: "Git & GitHub Essentials",
-    issuer: "GitHub",
-    date: "2023",
-    image: CertificateImg,
-    credentialId: "GITHUB-GIT-2023-004",
-  },
+ 
 ];
 
 export const education = [

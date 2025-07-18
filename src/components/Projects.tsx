@@ -28,10 +28,10 @@ const Projects = () => {
           <AnimatedSection
             key={index}
             delay={index * 100}
-            className=" border-[1px] border-gray-500 p-4 rounded-md flex flex-col md:flex-row even:md:flex-row-reverse items-center gap-8 mb-12 dark:text-white"
+            className=" bg-gray-50 hover:shadow-lg dark:bg-transparent transition-all duration-300 dark:border dark:border-gray-500 p-4 rounded-md flex flex-col md:flex-row even:md:flex-row-reverse items-center gap-8 mb-12 dark:text-white"
           >
             {/* Image */}
-            <div className="w-full md:w-1/2 relative overflow-hidden border-2 border-gray-500  rounded-md">
+            <div className="w-full md:w-1/2 relative overflow-hidden">
               <Image
                 src={item.image}
                 alt="project preview"
@@ -47,7 +47,7 @@ const Projects = () => {
                 {item.title}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 ">{item.description}</p>
-              <div className="flex flex-wrap items-center gap-2 text-sm">
+              <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                 TechStack:
                 {item.tech.map((tech, i) => (
                   <span
