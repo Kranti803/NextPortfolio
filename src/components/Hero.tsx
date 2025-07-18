@@ -50,7 +50,7 @@ const Hero = () => {
                 </button>
               </Link>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center justify-center space-x-6">
               <Link
                 href="https://github.com/Kranti803"
                 target="_blank"

@@ -21,8 +21,8 @@ const Skills = () => {
         </AnimatedSection>
 
         <div className="grid gap-8 grid-cols-2 sm:grid-cols-4 pt-6">
-          {skills1.map((item) => (
-            <AnimatedSection delay={200}>
+          {skills1.map((item,index) => (
+            <AnimatedSection delay={200} key={index}>
               <div
                 key={item.id}
                 className="dark:text-white min-h-[125px] flex flex-col text-center items-center justify-center
