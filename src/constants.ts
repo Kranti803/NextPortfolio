@@ -115,7 +115,7 @@ export const navLinks = [
   "skills",
   "projects",
   "education",
-  // "certificates",
+  "certificates",
   "services",
   "contact",
 ];
