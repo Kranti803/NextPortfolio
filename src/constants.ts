@@ -1,5 +1,6 @@
-import { Smartphone, Globe, School } from "lucide-react";
+import { Smartphone, Globe } from "lucide-react";
 import ResponsiveDesign from "@/assets/responsive_web_design.png";
+import ReactCertificate from "@/assets/reactCertificate.jpg";
 import Ecommerce from "@/assets/ecommerce.png";
 import Blog from "@/assets/blog.png";
 import Movie from "@/assets/movie.png";
@@ -194,6 +195,12 @@ export const certificates = [
     image: ResponsiveDesign,
     
   },
+  {
+     title: "Frontend Developer (React)",
+    issuer: "HackerRank",
+    date: "2025",
+    image: ReactCertificate,
+  }
  
 ];
 

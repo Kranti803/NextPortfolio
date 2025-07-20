@@ -20,10 +20,10 @@ const Certificates = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {certificates.map((cert, index) => (
             <AnimatedSection key={index} delay={index * 100}>
-              <div className="bg-white dark:bg-gray-900 rounded-xl hover:shadow-lg h-80 w-96 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group flex flex-col justify-between">
+              <div className="bg-white dark:bg-gray-900 rounded-xl hover:shadow-lg h-80 w-80 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group flex flex-col justify-between">
                 <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-600 overflow-hidden">
                   <Image
                     src={cert.image}
