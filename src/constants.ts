@@ -4,9 +4,7 @@ import ReactCertificate from "@/assets/reactCertificate.jpg";
 import Ecommerce from "@/assets/ecommerce.png";
 import Blog from "@/assets/blog.png";
 import Movie from "@/assets/movie.png";
-
-
-
+import Hotel from "@/assets/hotel_landing_page.png";
 
 import HTML from "./assets/html.png";
 import CSS from "./assets/css.png";
@@ -26,88 +24,86 @@ import NextJS from "./assets/nextjs.png";
 import TYPESCRIPT from "./assets/typescript.png";
 
 export const skills1 = [
-    {
-        id: 1,
-        name: "HTML",
-        imageSrc: HTML
-    },
-    {
-        id: 2,
-        name: "CSS",
-        imageSrc: CSS
-    },
-    {
-        id: 3,
-        name: "Javascript",
-        imageSrc: JS
-    },
-    {
-        id: 4,
-        name: "React JS",
-        imageSrc: REACT
-    },
-    {
-        id: 5,
-        name: "Node JS",
-        imageSrc: NODE
-    },
-    {
-        id: 6,
-        name: "MongoDB",
-        imageSrc: MONGODB
-    },
-    {
-        id: 7,
-        name: "Express JS",
-        imageSrc: EXPRESS
-    },
-    {
-        id: 8,
-        name: "Redux Toolkit",
-        imageSrc: REDUX
-    },
-    {
-        id: 9,
-        name: "Tailwind Css",
-        imageSrc: TAILWIND
-    },
-    {
-        id: 10,
-        name: "Git",
-        imageSrc: GIT
-    },
-    {
-        id: 11,
-        name: "Github",
-        imageSrc: GITHUB
-    },
-    {
-        id: 12,
-        name: "Sass",
-        imageSrc: SASS
-    },
-    {
-        id: 13,
-        name: "Firebase",
-        imageSrc: FIREBASE
-    },
-    {
-        id: 14,
-        name: "C++",
-        imageSrc: CPP
-    },
-    {
-        id: 15,
-        name: "Next JS",
-        imageSrc: NextJS
-    },
-    {
-        id: 16,
-        name: "Typescript",
-        imageSrc: TYPESCRIPT
-    },
-
-
+  {
+    id: 1,
+    name: "HTML",
+    imageSrc: HTML,
+  },
+  {
+    id: 2,
+    name: "CSS",
+    imageSrc: CSS,
+  },
+  {
+    id: 3,
+    name: "Javascript",
+    imageSrc: JS,
+  },
+  {
+    id: 4,
+    name: "React JS",
+    imageSrc: REACT,
+  },
+  {
+    id: 5,
+    name: "Node JS",
+    imageSrc: NODE,
+  },
+  {
+    id: 6,
+    name: "MongoDB",
+    imageSrc: MONGODB,
+  },
+  {
+    id: 7,
+    name: "Express JS",
+    imageSrc: EXPRESS,
+  },
+  {
+    id: 8,
+    name: "Redux Toolkit",
+    imageSrc: REDUX,
+  },
+  {
+    id: 9,
+    name: "Tailwind Css",
+    imageSrc: TAILWIND,
+  },
+  {
+    id: 10,
+    name: "Git",
+    imageSrc: GIT,
+  },
+  {
+    id: 11,
+    name: "Github",
+    imageSrc: GITHUB,
+  },
+  {
+    id: 12,
+    name: "Sass",
+    imageSrc: SASS,
+  },
+  {
+    id: 13,
+    name: "Firebase",
+    imageSrc: FIREBASE,
+  },
+  {
+    id: 14,
+    name: "C++",
+    imageSrc: CPP,
+  },
+  {
+    id: 15,
+    name: "Next JS",
+    imageSrc: NextJS,
+  },
+  {
+    id: 16,
+    name: "Typescript",
+    imageSrc: TYPESCRIPT,
+  },
 ];
 
 export const navLinks = [
@@ -132,12 +128,7 @@ export const skills = {
   ],
   backend: ["Node.js", "Express", "REST APIs", "MongoDB", "Redis"],
   tools: ["Git", "VS Code", "Figma", "Vercel", "Postman", "AI Tools"],
-  learning: [
-    "React Native",
-    "Python",
-    "GEN AI",
-    "Testing",
-  ],
+  learning: ["React Native", "Python", "GEN AI", "Testing"],
 };
 
 export const services = [
@@ -185,6 +176,16 @@ export const projects = [
     github: "https://github.com/Kranti803/movieWebApp",
     demo: "https://movie-web-app-gamma.vercel.app/",
   },
+  {
+    title: "AMARIS",
+    description:
+      "A modern and responsive hotel booking landing page built with React, styled using Tailwind CSS, and enhanced with smooth animations from Framer Motion for an engaging user experience.",
+    tech: ["React", "Tailwind Css", "Framer Motion"],
+    image: Hotel,
+    github:
+      "https://github.com/Kranti803/internship_task_hotelBooking_landingPage",
+    demo: "https://hotel-booking-landing.vercel.app/",
+  },
 ];
 
 export const certificates = [
@@ -193,15 +194,13 @@ export const certificates = [
     issuer: "FreeCodeCamp",
     date: "2025",
     image: ResponsiveDesign,
-    
   },
   {
-     title: "Frontend Developer (React)",
+    title: "Frontend Developer (React)",
     issuer: "HackerRank",
     date: "2025",
     image: ReactCertificate,
-  }
- 
+  },
 ];
 
 export const education = [
@@ -227,5 +226,3 @@ export const education = [
     color: "blue",
   },
 ];
-
-
