@@ -177,7 +177,7 @@ export const projects = [
     demo: "https://movie-web-app-gamma.vercel.app/",
   },
   {
-    title: "AMARIS",
+    title: "ALMARIS",
     description:
       "A modern and responsive hotel booking landing page built with React, styled using Tailwind CSS, and enhanced with smooth animations from Framer Motion for an engaging user experience.",
     tech: ["React", "Tailwind Css", "Framer Motion"],
