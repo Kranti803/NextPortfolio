@@ -1,89 +1,84 @@
 import React from "react";
 import {
-  Github,
-  Linkedin,
-  Mail,
-  ChevronDown,
-  ArrowRight,
-  Download,
-} from "lucide-react";
+  AiOutlineGithub,
+  AiOutlineInstagram,
+  AiOutlineSend,
+} from "react-icons/ai";
+import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import Link from "next/link";
-const Hero = () => {
+// import { TypewriterEffect } from "./Client";
+import TypewriterComponent from "typewriter-effect";
+import Profile from "../assets/avatarr.png";
+import Image from "next/image";
+
+const Home = () => {
   return (
-    <section
-      id="home"
-      className="pt-16 min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center min-h-screen py-12">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-                  Kranti Kumar
-                </span>
-              </h1>
-
-              <h2 className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300">
-                A Full Stack Developer
-              </h2>
-
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-                A passionate computer science student eager to create innovative
-                web solutions. I love building user-friendly applications and
-                learning new technologies every day.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={"#projects"}>
-                <button className="inline-flex items-center justify-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
-                  View Projects
-                  <ArrowRight size={18} className="ml-2" />
-                </button>
-              </Link>
-
-              <Link href={"/resume.pdf"} download={true}>
-                <button className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300">
-                  <Download size={18} className="mr-2" />
-                  Download CV
-                </button>
-              </Link>
-            </div>
-            <div className="flex items-center justify-center space-x-6">
-              <Link
-                href="https://github.com/Kranti803"
-                target="_blank"
-                className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
-              >
-                <Github size={24} />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/kranti-kumar-671762223/"
-                target="_blank"
-                className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
-              >
-                <Linkedin size={24} />
-              </Link>
-              <Link
-                href="mailto:krantikumar803@gmail.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300"
-              >
-                <Mail size={24} />
-              </Link>
-            </div>
-          </div>
+    <section className="py-4 rounded-md px-6 md:min-h-[calc(100vh-70px)]  flex flex-col-reverse lg:flex-row items-center justify-between gap-10 ">
+      <div className="flex flex-col gap-6 max-w-xl text-center lg:text-left">
+        <div>
+          <p className="text-xl dark:text-slate-100 text-[#383838]">
+            Hello! 👋
+          </p>
+          <h3 className="text-4xl md:text-6xl font-bold  dark:text-slate-100 text-[#383838]">
+            I'm <span>Kranti Kumar</span>
+          </h3>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="text-center pb-8">
-          <button className="animate-bounce text-gray-400 dark:text-gray-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-300">
-            <ChevronDown size={32} />
-          </button>
+        <h4 className="text-sm xs:text-lg md:text-2xl flex items-center justify-center lg:justify-start gap-2 dark:text-slate-100">
+          {/* I'm <TypewriterEffect /> */}
+          I'm A FullStack Developer
+        </h4>
+
+        <p className="text-sm sm:text-lg leading-relaxed text-[#666666] dark:text-slate-100">
+          I have a passion for building intuitive, user-friendly interfaces that
+          provide an enjoyable and seamless user experience.
+        </p>
+
+        <Link
+          href="mailto:krantikumar803@gmail.com"
+          className="flex items-center w-fit px-3 py-2 gap-x-2 rounded-md dark:bg-stone-600/30 dark:border-stone-700 border border-[#373737] bg-[#141414] text-slate-100"
+        >
+          Contact me <AiOutlineSend size={18} />
+        </Link>
+
+        <div className="flex justify-center lg:justify-start gap-6 text-2xl mt-4">
+          <Link
+            href="https://www.facebook.com/profile.php?id=100009548415723"
+            target="_blank"
+          >
+            <FaFacebookSquare
+              className="dark:hover:bg-stone-600/30 dark:border-stone-700 hover:bg-[#f0f0f0] border-gray-300 border p-2 rounded-md "
+              size={50}
+            />
+          </Link>
+          <AiOutlineInstagram
+            className="dark:hover:bg-stone-600/30 cursor-pointer border-gray-300 hover:bg-[#f0f0f0] dark:border-stone-700 border p-2 rounded-md "
+            size={50}
+          />
+          <FaLinkedin
+            className="dark:hover:bg-stone-600/30 cursor-pointerborder-gray-300 hover:bg-[#f0f0f0]  dark:border-stone-700 border p-2 rounded-md "
+            size={50}
+          />
+          <Link href="https://github.com/Kranti803" target="_blank">
+            <AiOutlineGithub
+              className="dark:hover:bg-stone-600/30 hover:bg-[#f0f0f0] border-gray-300 dark:border-stone-700 border p-2 rounded-md "
+              size={50}
+            />
+          </Link>
         </div>
+      </div>
+
+      <div className="flex justify-center lg:justify-end">
+        <Image
+          src={Profile}
+          alt="profile"
+          height={200}
+          width={200}
+          className="rounded-full p-4 dark:bg-stone-600/30  dark:border-stone-700 border border-gray-300  border-glow bg-[#d4d4d6]"
+        />
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Home;

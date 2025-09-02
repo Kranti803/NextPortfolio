@@ -1,51 +1,49 @@
 import React from "react";
-import { User, MapPin, Calendar } from "lucide-react";
-import AnimatedSection from "./AnimatedSection";
+import Image from "next/image";
+import { BsDownload } from "react-icons/bs";
+import Profile from "../assets/avatarr.png";
+import Link from "next/link";
+
 const About = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+      className="px-6 py-12 md:min-h-[80vh] flex flex-col items-center justify-center gap-10"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-6">
-              About Me
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I build digital experiences that solve real-world problems. With a
-              strong foundation in programming and a curious mindset, I’m always
-              exploring new ways to create value through technology.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I believe in writing clean, efficient code and creating user
-              experiences that are both functional and delightful. I'm always
-              eager to learn new technologies and take on challenging projects
-              that push my boundaries.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                <MapPin
-                  size={16}
-                  className="text-emerald-600 dark:text-emerald-400"
-                />
-                <span>Kathmandu, Nepal</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                <Calendar
-                  size={16}
-                  className="text-emerald-600 dark:text-emerald-400"
-                />
-                <span>Available for opportunities</span>
-              </div>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={200} className="lg:text-right">
-            <div className="inline-block bg-gradient-to-br from-emerald-500 to-blue-500 p-8 rounded-2xl">
-              <User size={120} className="text-white" />
-            </div>
-          </AnimatedSection>
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="flex justify-center lg:justify-start">
+          <Image
+            src={Profile}
+            loading="lazy"
+            alt="profile_image"
+            className="rounded-full p-4 dark:bg-stone-600/30 border dark:border-stone-700 border-glow hover:grayscale transition-all duration-300 h-[220px] xs:h-[300px] md:h-[400px] w-[220px] xs:w-[300px] md:w-[400px] object-cover bg-[#d4d4d6]"
+          />
+        </div>
+
+        <div className="text-center lg:text-left max-w-xl">
+          <h3 className="text-2xl md:text-3xl font-bold text-secondary-color text-[#383838] dark:text-slate-100 mb-4">
+            . About Me
+          </h3>
+          <p className="text-sm sm:text-lg md:text-base leading-relaxed text-[#666666] dark:text-slate-100 mb-6">
+            As a dedicated and self-motivated individual, I am a full-stack
+            developer with a passion for creating elegant and efficient
+            solutions. I have a strong background in computer science and am a
+            self-taught developer always eager to expand my skillset. My
+            technical expertise includes JavaScript, C++, and experience with
+            popular web development frameworks and libraries such as React,
+            Node.js, and MongoDB. I create seamless and responsive web
+            applications, proactively solving problems and optimizing code. I am
+            excited to contribute my skills to innovative and impactful
+            projects.
+          </p>
+
+          <Link
+            href={"/resume.pdf"}
+            download={true}
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-md dark:bg-stone-600/30 dark:border-stone-700 border text-slate-100 bg-[#141414] font-medium"
+          >
+            Resume <BsDownload size={20} />
+          </Link>
         </div>
       </div>
     </section>

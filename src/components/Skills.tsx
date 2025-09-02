@@ -7,33 +7,34 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="px-6 py-12 md:min-h-[80vh] flex flex-col gap-10 dark:text-slate-100"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto w-full">
         <AnimatedSection className="text-center mb-12">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent mb-4">
-            Technical Skills
+          <h2 className="text-2xl md:text-3xl font-bold lg:text-left dark:text-slate-100 mb-4 text-[#383838]">
+            . Technical Skills
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-lg md:text-base leading-relaxed dark:text-slate-100 text-[#666666] lg:text-left">
             Technologies I work with and continuously learning to build amazing
             applications
           </p>
         </AnimatedSection>
 
         <div className="grid gap-8 grid-cols-2 sm:grid-cols-4 pt-6">
-          {skills1.map((item,index) => (
+          {skills1.map((item, index) => (
             <AnimatedSection delay={200} key={index}>
               <div
                 key={item.id}
-                className="dark:text-white min-h-[125px] bg-gray-50 dark:bg-transparent dark:border border-gray-500 rounded-md flex flex-col text-center items-center justify-center
-           hover:shadow-lg transition-all duration-300 dark:border-gray-700 "
+                className="rounded-md min-h-[125px] flex flex-col items-center justify-center text-center
+                dark:bg-stone-600/30 border dark:border-stone-700 bg-transparent 
+                hover:grayscale transition-all duration-300 hover:shadow-md"
               >
                 <Image
                   src={item.imageSrc}
-                  className=" h-[70px] w-[70px]"
+                  className="h-[70px] w-[70px]"
                   alt="skills_png"
                 />
-                <span className="text-gray-600">{item.name}</span>
+                <span className="mt-2 text-gray-400">{item.name}</span>
               </div>
             </AnimatedSection>
           ))}

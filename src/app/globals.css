@@ -4,22 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-}
 
-@layer utilities {
-  .font-inter {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-}
 
 @layer utilities {
   .animate-fade-in {
@@ -161,4 +146,18 @@
 
 .dark .hover-lift:hover {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* border glow effecr */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgb(68, 64, 60);
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.border-glow {
+  animation: borderGlow 2s ease-in-out infinite;
 }

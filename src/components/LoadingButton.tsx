@@ -8,7 +8,7 @@ const LoadingButton = () => {
   return (
     <button
       disabled={true}
-      className="flex justify-center w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105"
+      className="flex justify-center w-full bg-stone-800/90 text-white py-3 px-6 rounded-md"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
